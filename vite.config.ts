@@ -4,7 +4,7 @@ import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import { configDefaults } from "vitest/config";
 
 export default defineConfig({
-  base: "/",
+  base: "/authorization/",
   plugins: [react(), TanStackRouterVite()],
   resolve: {
     alias: {
