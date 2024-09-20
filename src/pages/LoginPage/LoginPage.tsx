@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
     const handleLogin = () => {
         login(username, password, (success) => {
             if (success) {
-                navigate({ to: '/' });
+                navigate({ to: '/authorization/' });
             } else {
                 setError('Invalid login or password');
             }

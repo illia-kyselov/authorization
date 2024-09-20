@@ -8,7 +8,7 @@ const NotFound: React.FC = () => {
                 <div className="text-[20px] sm:text-[24px] lg:text-[32px] font-medium max-w-[244px] sm:max-w-[398px] lg:max-w-[542px] text-green-800 mb-6 sm:mb-8">
                     Sorry, the page you are looking for doesn't exist
                 </div>
-                <Link to="/" className="bg-green-800 text-lime-300 font-semibold py-3 px-3 rounded-lg hover:bg-green-900 transition duration-300">
+                <Link to="/authorization/" className="bg-green-800 text-lime-300 font-semibold py-3 px-3 rounded-lg hover:bg-green-900 transition duration-300">
                     Home
                 </Link>
             </div>

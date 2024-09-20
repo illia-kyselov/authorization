@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
 
     const handleLogout = () => {
         logout();
-        navigate({ to: '/login' });
+        navigate({ to: '/authorization/login' });
     };
 
     return (

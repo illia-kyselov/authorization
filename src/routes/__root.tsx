@@ -5,10 +5,16 @@ export const Route = createRootRoute({
     component: () => (
         <>
             <div className="p-3 flex gap-5 ml-4">
-                <Link to="/" className="font-semibold [&.active]:font-bold [&.active]:text-green-800 text-lg">
+                <Link
+                    to="/authorization/"
+                    className={`font-semibold text-lg ${window.location.pathname === '/authorization/' ? 'font-bold text-green-800' : 'text-gray-700'}`}
+                >
                     Home
                 </Link>
-                <Link to="/login" className="font-semibold [&.active]:font-bold [&.active]:text-green-800  text-lg">
+                <Link
+                    to="/authorization/login"
+                    className={`font-semibold text-lg ${window.location.pathname === '/authorization/login' ? 'font-bold text-green-800' : 'text-gray-700'}`}
+                >
                     Login
                 </Link>
             </div>

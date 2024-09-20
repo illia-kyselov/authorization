@@ -17,12 +17,12 @@ import { Route as IndexImport } from './routes/index'
 // Create/Update Routes
 
 const LoginRoute = LoginImport.update({
-  path: '/login',
+  path: '/authorization/login',
   getParentRoute: () => rootRoute,
 } as any)
 
 const IndexRoute = IndexImport.update({
-  path: '/',
+  path: '/authorization/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -30,17 +30,17 @@ const IndexRoute = IndexImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
+    '/authorization/': {
+      id: '/authorization/'
+      path: '/authorization/'
+      fullPath: '/authorization/'
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
+    '/authorization/login': {
+      id: '/authorization/login'
+      path: '/authorization/login'
+      fullPath: '/authorization/login'
       preLoaderRoute: typeof LoginImport
       parentRoute: typeof rootRoute
     }
@@ -50,27 +50,27 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/login': typeof LoginRoute
+  '/authorization/': typeof IndexRoute
+  '/authorization/login': typeof LoginRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/login': typeof LoginRoute
+  '/authorization/': typeof IndexRoute
+  '/authorization/login': typeof LoginRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/login': typeof LoginRoute
+  '/authorization/': typeof IndexRoute
+  '/authorization/login': typeof LoginRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/login'
+  fullPaths: '/authorization/' | '/authorization/login'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/login'
-  id: '__root__' | '/' | '/login'
+  to: '/authorization/' | '/authorization/login'
+  id: '__root__' | '/authorization/' | '/authorization/login'
   fileRoutesById: FileRoutesById
 }
 
