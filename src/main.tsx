@@ -3,7 +3,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/tailwind.css';
 import { AuthService } from './core/auth/authService';
-import { routeTree } from './routeTree.gen';
+import { routeTree } from './routeTree';
 import { container } from './core/di/dependencyContainer/dependencyContainer';
 
 container.registerSingleton('AuthService', new AuthService());
