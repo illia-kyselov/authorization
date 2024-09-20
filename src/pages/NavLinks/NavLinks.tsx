@@ -3,7 +3,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 const MenuComponent: React.FC = () => {
     const location = useLocation();
 
-    const isHomeActive = location.pathname === "/authorization/";
+    const isHomeActive = location.pathname === "/authorization/" || location.pathname === "/authorization";
     const isLoginActive = location.pathname.includes("/authorization/login");
 
     return (
